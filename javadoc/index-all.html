@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Index (Tupl 1.2.7-SNAPSHOT API)</title>
+<title>Index (Tupl 1.2.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="./stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Index (Tupl 1.2.7-SNAPSHOT API)";
+        parent.document.title="Index (Tupl 1.2.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -78,6 +78,10 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/AbstractView.html#AbstractView()">AbstractView()</a></span> - Constructor for class org.cojen.tupl.<a href="./org/cojen/tupl/AbstractView.html" title="class in org.cojen.tupl">AbstractView</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#add(org.cojen.tupl.Index.Stats)">add(Index.Stats)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Adds stats into a new object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/CipherCrypto.html#algorithm()">algorithm()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/CipherCrypto.html" title="class in org.cojen.tupl">CipherCrypto</a></dt>
 <dd>
 <div class="block">Returns "AES" by default; override to change the algorithm.</div>
@@ -85,6 +89,10 @@
 <dt><span class="strong"><a href="./org/cojen/tupl/LockResult.html#alreadyOwned()">alreadyOwned()</a></span> - Method in enum org.cojen.tupl.<a href="./org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></dt>
 <dd>
 <div class="block">Returns true if lock was already owned when requested.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.html#analyze(byte[],%20byte[])">analyze(byte[], byte[])</a></span> - Method in interface org.cojen.tupl.<a href="./org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
+<dd>
+<div class="block">Estimates the size of this index with a single random probe.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.html#applyCachePrimer(java.io.InputStream)">applyCachePrimer(InputStream)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.html" title="class in org.cojen.tupl">Database</a></dt>
 <dd>
@@ -602,6 +610,14 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/DirectAccess.html#DirectAccess()">DirectAccess()</a></span> - Constructor for class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/DirectAccess.html" title="class in org.cojen.tupl.io">DirectAccess</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#divide(double)">divide(double)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Divide the stats by a scalar into a new object.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#divideAndRound(double)">divideAndRound(double)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Divide the stats by a scalar and round to whole numbers into a new object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/AbstractCursor.html#doSkip(long)">doSkip(long)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/AbstractCursor.html" title="class in org.cojen.tupl">AbstractCursor</a></dt>
 <dd>
 <div class="block">Simple skip implementation which doesn't support skip by zero.</div>
@@ -692,6 +708,10 @@
 <dt><span class="strong"><a href="./org/cojen/tupl/Transaction.html#enter()">enter()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a></dt>
 <dd>
 <div class="block">Enters a nested transaction scope.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#entryCount()">entryCount()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Returns the estimated number of index entries.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.Stats.html#equals(java.lang.Object)">equals(Object)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.Stats.html" title="class in org.cojen.tupl">Database.Stats</a></dt>
 <dd>&nbsp;</dd>
@@ -864,6 +884,10 @@
 <dd>
 <div class="block">Flushes, but does not sync, all non-flushed transactions.</div>
 </dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#freeBytes()">freeBytes()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Returns the estimated amount of free bytes in the index.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.Stats.html#freePages()">freePages()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.Stats.html" title="class in org.cojen.tupl">Database.Stats</a></dt>
 <dd>
 <div class="block">Returns the amount of unused pages in the database.</div>
@@ -977,6 +1001,12 @@
 <dd>
 <div class="block">Index currently being verified.</div>
 </dd>
+<dt><a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl"><span class="strong">Index.Stats</span></a> - Class in <a href="./org/cojen/tupl/package-summary.html">org.cojen.tupl</a></dt>
+<dd>
+<div class="block">Immutable copy of stats from the <a href="./org/cojen/tupl/Index.html#analyze(byte[],%20byte[])"><code>analyze</code></a> method.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#Index.Stats(double,%20double,%20double,%20double,%20double)">Index.Stats(double, double, double, double, double)</a></span> - Constructor for class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/CompactionObserver.html#indexBegin(org.cojen.tupl.Index)">indexBegin(Index)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/CompactionObserver.html" title="class in org.cojen.tupl">CompactionObserver</a></dt>
 <dd>
 <div class="block">Called before full index compaction begins.</div>
@@ -1132,6 +1162,10 @@
 <dd>
 <div class="block">Returns an uncopied reference to the current key, or null if Cursor is
  unpositioned.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#keyBytes()">keyBytes()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Returns the estimated amount of bytes occupied by keys in the index.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/CipherCrypto.html#keySize()">keySize()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/CipherCrypto.html" title="class in org.cojen.tupl">CipherCrypto</a></dt>
 <dd>
@@ -1748,6 +1782,10 @@
 <dd>
 <div class="block">Returns the root cause of the given exception.</div>
 </dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#round()">round()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Round the stats to whole numbers into a new object.</div>
+</dd>
 </dl>
 <a name="_S_">
 <!--   -->
@@ -1844,6 +1882,10 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#StripedPageArray(org.cojen.tupl.io.PageArray...)">StripedPageArray(PageArray...)</a></span> - Constructor for class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#subtract(org.cojen.tupl.Index.Stats)">subtract(Index.Stats)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Subtract stats into a new object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.html#suspendCheckpoints()">suspendCheckpoints()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.html" title="class in org.cojen.tupl">Database</a></dt>
 <dd>
 <div class="block">Temporarily suspend automatic checkpoints without waiting for any in-progress checkpoint
@@ -1908,10 +1950,16 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/DeadlockSet.html#toString()">toString()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/DeadlockSet.html" title="class in org.cojen.tupl">DeadlockSet</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#toString()">toString()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/tools/Verify.html#toString()">toString()</a></span> - Method in class org.cojen.tupl.tools.<a href="./org/cojen/tupl/tools/Verify.html" title="class in org.cojen.tupl.tools">Verify</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Transaction.html#toString()">toString()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#totalBytes()">totalBytes()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Returns the estimated total amount of bytes in the index.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.Stats.html#totalPages()">totalPages()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.Stats.html" title="class in org.cojen.tupl">Database.Stats</a></dt>
 <dd>
 <div class="block">Returns the total amount of pages in the database.</div>
@@ -2025,6 +2073,10 @@
 <dd>
 <div class="block">Returns an uncopied reference to the current value, which might be null
  or <a href="./org/cojen/tupl/Cursor.html#NOT_LOADED"><code>Cursor.NOT_LOADED</code></a>.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#valueBytes()">valueBytes()</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
+<dd>
+<div class="block">Returns the estimated amount of bytes occupied by values in the index.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/DurabilityMode.html#valueOf(java.lang.String)">valueOf(String)</a></span> - Static method in enum org.cojen.tupl.<a href="./org/cojen/tupl/DurabilityMode.html" title="enum in org.cojen.tupl">DurabilityMode</a></dt>
 <dd>
