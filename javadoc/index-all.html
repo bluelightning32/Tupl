@@ -253,6 +253,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#close(java.lang.Throwable)">close(Throwable)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#close(java.lang.Throwable)">close(Throwable)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#close()">close()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#close(java.lang.Throwable)">close(Throwable)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
@@ -390,6 +392,18 @@
 <div class="block">Returns a new independent Cursor, positioned where this one is, and
  linked to the same transaction.</div>
 </dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#copyPage(long,%20long)">copyPage(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#copyPage(long,%20long)">copyPage(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#copyPage(long,%20long)">copyPage(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#copyPageFromPointer(long,%20long)">copyPageFromPointer(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#copyPageFromPointer(long,%20long)">copyPageFromPointer(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#copyPageFromPointer(long,%20long)">copyPageFromPointer(long, long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/cojen/tupl/CorruptDatabaseException.html" title="class in org.cojen.tupl"><span class="strong">CorruptDatabaseException</span></a> - Exception in <a href="./org/cojen/tupl/package-summary.html">org.cojen.tupl</a></dt>
 <dd>
 <div class="block">Thrown when the internal structure of the <a href="./org/cojen/tupl/Database.html" title="class in org.cojen.tupl"><code>database</code></a> is
@@ -609,6 +623,12 @@
 <div class="block">Backdoor access to DirectByteBuffer.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/DirectAccess.html#DirectAccess()">DirectAccess()</a></span> - Constructor for class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/DirectAccess.html" title="class in org.cojen.tupl.io">DirectAccess</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#directPagePointer(long)">directPagePointer(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#directPagePointer(long)">directPagePointer(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#directPagePointer(long)">directPagePointer(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Index.Stats.html#divide(double)">divide(double)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Index.Stats.html" title="class in org.cojen.tupl">Index.Stats</a></dt>
 <dd>
@@ -943,11 +963,21 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#getPageCount()">getPageCount()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#getPageCount()">getPageCount()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#getPageCount()">getPageCount()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>
-<div class="block">Returns the total count of pages in the array or Long.MAX_VALUE if not applicable.</div>
+<div class="block">Returns the total count of pages in the array, or Long.MAX_VALUE if not applicable.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#getPageCount()">getPageCount()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#getPageCountLimit()">getPageCountLimit()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#getPageCountLimit()">getPageCountLimit()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
+<dd>
+<div class="block">Return maximum allowed page count, or -1 if not applicable.</div>
+</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#getPageCountLimit()">getPageCountLimit()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/DeadlockException.html#getShortMessage()">getShortMessage()</a></span> - Method in exception org.cojen.tupl.<a href="./org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></dt>
 <dd>&nbsp;</dd>
@@ -1112,6 +1142,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#isEmpty()">isEmpty()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#isEmpty()">isEmpty()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#isEmpty()">isEmpty()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/StripedPageArray.html#isEmpty()">isEmpty()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
@@ -1125,6 +1157,8 @@
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FileIO.html#isReadOnly()">isReadOnly()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io">FileIO</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#isReadOnly()">isReadOnly()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#isReadOnly()">isReadOnly()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#isReadOnly()">isReadOnly()</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>&nbsp;</dd>
@@ -1384,6 +1418,10 @@
 <dd>
 <div class="block">Enable memory mapping of the data files.</div>
 </dd>
+<dt><a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io"><span class="strong">MappedPageArray</span></a> - Class in <a href="./org/cojen/tupl/io/package-summary.html">org.cojen.tupl.io</a></dt>
+<dd>
+<div class="block"><a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io"><code>PageArray</code></a> implementation which accesses a fixed sized file, fully mapped to memory.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/DatabaseConfig.html#maxCacheSize(long)">maxCacheSize(long)</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></dt>
 <dd>
 <div class="block">Set the maximum cache size, overriding the default.</div>
@@ -1529,6 +1567,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FileIO.html#open(java.io.File,%20java.util.EnumSet,%20int)">open(File, EnumSet&lt;OpenOption&gt;, int)</a></span> - Static method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io">FileIO</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#open(int,%20long,%20java.io.File,%20java.util.EnumSet)">open(int, long, File, EnumSet&lt;OpenOption&gt;)</a></span> - Static method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Database.html#openIndex(byte[])">openIndex(byte[])</a></span> - Method in class org.cojen.tupl.<a href="./org/cojen/tupl/Database.html" title="class in org.cojen.tupl">Database</a></dt>
 <dd>
 <div class="block">Returns the given named index, creating it if necessary.</div>
@@ -1657,6 +1697,10 @@
  is reached too soon.</div>
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#readPage(long,%20byte[],%20int,%20int)">readPage(long, byte[], int, int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#readPage(long,%20byte[],%20int,%20int)">readPage(long, byte[], int, int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#readPage(long,%20long,%20int,%20int)">readPage(long, long, int, int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#readPage(long,%20byte[])">readPage(long, byte[])</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>&nbsp;</dd>
@@ -1809,6 +1853,8 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#setPageCount(long)">setPageCount(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#setPageCount(long)">setPageCount(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#setPageCount(long)">setPageCount(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>
 <div class="block">Set the total count of pages, truncating or growing the array as necessary.</div>
@@ -1905,6 +1951,8 @@
 </dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#sync(boolean)">sync(boolean)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#sync(boolean)">sync(boolean)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#sync(boolean)">sync(boolean)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>
 <div class="block">Durably flushes all writes to the underlying device.</div>
@@ -1921,6 +1969,8 @@
 <div class="block">Durably flushes all local data to non-volatile storage, up to the given confirmed
  position, and then blocks until fully confirmed.</div>
 </dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#syncPage(long)">syncPage(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#syncPage(long)">syncPage(long)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>
 <div class="block">Durably flushes the page at the given index, but implementation might flush more pages.</div>
@@ -2041,7 +2091,9 @@
 <dt><span class="strong"><a href="./org/cojen/tupl/UnmodifiableViewException.html#UnmodifiableViewException()">UnmodifiableViewException()</a></span> - Constructor for exception org.cojen.tupl.<a href="./org/cojen/tupl/UnmodifiableViewException.html" title="class in org.cojen.tupl">UnmodifiableViewException</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/DirectAccess.html#unref(java.nio.ByteBuffer)">unref(ByteBuffer)</a></span> - Static method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/DirectAccess.html" title="class in org.cojen.tupl.io">DirectAccess</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Optionally unreference a buffer.</div>
+</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/Index.html#update(org.cojen.tupl.Transaction,%20byte[],%20byte[],%20byte[])">update(Transaction, byte[], byte[], byte[])</a></span> - Method in interface org.cojen.tupl.<a href="./org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
 <dd>
 <div class="block">Associates a value with the given key, but only if the given old value
@@ -2322,6 +2374,10 @@ the order they are declared.</div>
 <dt><span class="strong"><a href="./org/cojen/tupl/WriteFailureException.html#WriteFailureException(java.lang.Throwable)">WriteFailureException(Throwable)</a></span> - Constructor for exception org.cojen.tupl.<a href="./org/cojen/tupl/WriteFailureException.html" title="class in org.cojen.tupl">WriteFailureException</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/FilePageArray.html#writePage(long,%20byte[],%20int)">writePage(long, byte[], int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#writePage(long,%20byte[],%20int)">writePage(long, byte[], int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/cojen/tupl/io/MappedPageArray.html#writePage(long,%20long,%20int)">writePage(long, long, int)</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/cojen/tupl/io/PageArray.html#writePage(long,%20byte[])">writePage(long, byte[])</a></span> - Method in class org.cojen.tupl.io.<a href="./org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>

@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/cojen/tupl/io/OpenOption.html" title="enum in org.cojen.tupl.io"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/cojen/tupl/io/FilePageArray.html" target="_top">Frames</a></li>
@@ -159,7 +159,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/FilePageArray.html#getPageCount()">getPageCount</a></strong>()</code>
-<div class="block">Returns the total count of pages in the array or Long.MAX_VALUE if not applicable.</div>
+<div class="block">Returns the total count of pages in the array, or Long.MAX_VALUE if not applicable.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -203,7 +203,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.cojen.tupl.io.<a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></h3>
-<code><a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage(long,%20byte[])">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage(long,%20byte[],%20int)">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#close()">close</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage(long,%20byte[])">evictPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#pageSize()">pageSize</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#readPage(long,%20byte[])">readPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#syncPage(long)">syncPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#uncachePage(long)">uncachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#writePage(long,%20byte[])">writePage</a></code></li>
+<code><a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage(long,%20byte[])">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage(long,%20byte[],%20int)">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#close()">close</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPage(long,%20long)">copyPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPageFromPointer(long,%20long)">copyPageFromPointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#directPagePointer(long)">directPagePointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage(long,%20byte[])">evictPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCountLimit()">getPageCountLimit</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#pageSize()">pageSize</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#readPage(long,%20byte[])">readPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#syncPage(long)">syncPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#uncachePage(long)">uncachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#writePage(long,%20byte[])">writePage</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -300,7 +300,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <pre>public&nbsp;long&nbsp;getPageCount()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCount()">PageArray</a></code></strong></div>
-<div class="block">Returns the total count of pages in the array or Long.MAX_VALUE if not applicable.</div>
+<div class="block">Returns the total count of pages in the array, or Long.MAX_VALUE if not applicable.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCount()">getPageCount</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></code></dd>
@@ -431,7 +431,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/cojen/tupl/io/OpenOption.html" title="enum in org.cojen.tupl.io"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/cojen/tupl/io/FilePageArray.html" target="_top">Frames</a></li>

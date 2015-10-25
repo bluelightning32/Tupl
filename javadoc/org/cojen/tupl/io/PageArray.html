@@ -99,7 +99,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a>, <a href="../../../../org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dd>
+<dd><a href="../../../../org/cojen/tupl/io/FilePageArray.html" title="class in org.cojen.tupl.io">FilePageArray</a>, <a href="../../../../org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a>, <a href="../../../../org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dd>
 </dl>
 <hr>
 <br>
@@ -171,6 +171,20 @@ implements <a href="../../../../org/cojen/tupl/io/CauseCloseable.html" title="in
 <td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#close(java.lang.Throwable)">close</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#copyPage(long,%20long)">copyPage</a></strong>(long&nbsp;srcIndex,
+        long&nbsp;dstIndex)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#copyPageFromPointer(long,%20long)">copyPageFromPointer</a></strong>(long&nbsp;srcPointer,
+                   long&nbsp;dstIndex)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#directPagePointer(long)">directPagePointer</a></strong>(long&nbsp;index)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage(long,%20byte[])">evictPage</a></strong>(long&nbsp;index,
          byte[]&nbsp;buf)</code>
@@ -178,10 +192,16 @@ implements <a href="../../../../org/cojen/tupl/io/CauseCloseable.html" title="in
  be returned.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCount()">getPageCount</a></strong>()</code>
-<div class="block">Returns the total count of pages in the array or Long.MAX_VALUE if not applicable.</div>
+<div class="block">Returns the total count of pages in the array, or Long.MAX_VALUE if not applicable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCountLimit()">getPageCountLimit</a></strong>()</code>
+<div class="block">Return maximum allowed page count, or -1 if not applicable.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -327,7 +347,7 @@ implements <a href="../../../../org/cojen/tupl/io/CauseCloseable.html" title="in
 <h4>getPageCount</h4>
 <pre>public abstract&nbsp;long&nbsp;getPageCount()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Returns the total count of pages in the array or Long.MAX_VALUE if not applicable.</div>
+<div class="block">Returns the total count of pages in the array, or Long.MAX_VALUE if not applicable.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -345,6 +365,19 @@ implements <a href="../../../../org/cojen/tupl/io/CauseCloseable.html" title="in
  nothing.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if count is negative</dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getPageCountLimit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPageCountLimit</h4>
+<pre>public&nbsp;long&nbsp;getPageCountLimit()
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Return maximum allowed page count, or -1 if not applicable.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -480,6 +513,44 @@ implements <a href="../../../../org/cojen/tupl/io/CauseCloseable.html" title="in
 <div class="block">If supported, removes a page from the cache. Default implementation does nothing.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>index</code> - zero-based page index to write</dd>
 <dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="directPagePointer(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>directPagePointer</h4>
+<pre>public&nbsp;long&nbsp;directPagePointer(long&nbsp;index)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="copyPage(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyPage</h4>
+<pre>public&nbsp;long&nbsp;copyPage(long&nbsp;srcIndex,
+            long&nbsp;dstIndex)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="copyPageFromPointer(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyPageFromPointer</h4>
+<pre>public&nbsp;long&nbsp;copyPageFromPointer(long&nbsp;srcPointer,
+                       long&nbsp;dstIndex)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>

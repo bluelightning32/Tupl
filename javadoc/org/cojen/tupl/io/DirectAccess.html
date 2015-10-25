@@ -151,7 +151,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/DirectAccess.html#unref(java.nio.ByteBuffer)">unref</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/io/DirectAccess.html#unref(java.nio.ByteBuffer)">unref</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</code>
+<div class="block">Optionally unreference a buffer.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -226,6 +228,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>unref</h4>
 <pre>public static&nbsp;void&nbsp;unref(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</pre>
+<div class="block">Optionally unreference a buffer. The garbage collector does not attempt to free memory
+ referenced by a ByteBuffer created by this class.</div>
 </li>
 </ul>
 </li>
