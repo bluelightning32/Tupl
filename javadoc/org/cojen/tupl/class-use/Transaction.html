@@ -188,6 +188,17 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#evict(org.cojen.tupl.Transaction,%20byte[],%20byte[],%20byte[][],%20byte[][],%20int)">evict</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
+     byte[]&nbsp;lowKey,
+     byte[]&nbsp;highKey,
+     byte[][]&nbsp;keyRef,
+     byte[][]&nbsp;valueRef,
+     int&nbsp;maxEntriesToEvict)</code>
+<div class="block">Select an entry to delete from the index, possibly at random.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#exchange(org.cojen.tupl.Transaction,%20byte[],%20byte[])">exchange</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
         byte[]&nbsp;key,
@@ -195,7 +206,7 @@
 <div class="block">Unconditionally associates a value with the given key, returning the previous value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#exchange(org.cojen.tupl.Transaction,%20byte[],%20byte[])">exchange</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
         byte[]&nbsp;key,
@@ -203,7 +214,7 @@
 <div class="block">Unconditionally associates a value with the given key, returning the previous value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#insert(org.cojen.tupl.Transaction,%20byte[],%20byte[])">insert</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -212,7 +223,7 @@
  already exists.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#insert(org.cojen.tupl.Transaction,%20byte[],%20byte[])">insert</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -221,7 +232,7 @@
  already exists.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AbstractView.</span><code><strong><a href="../../../../org/cojen/tupl/AbstractView.html#insert(org.cojen.tupl.Transaction,%20byte[],%20byte[])">insert</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -230,19 +241,19 @@
  already exists.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a></code></td>
 <td class="colLast"><span class="strong">WrappedCursor.</span><code><strong><a href="../../../../org/cojen/tupl/WrappedCursor.html#link(org.cojen.tupl.Transaction)">link</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn)</code>
 <div class="block">Link to a transaction, which can be null for auto-commit mode.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a></code></td>
 <td class="colLast"><span class="strong">Cursor.</span><code><strong><a href="../../../../org/cojen/tupl/Cursor.html#link(org.cojen.tupl.Transaction)">link</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn)</code>
 <div class="block">Link to a transaction, which can be null for auto-commit mode.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#load(org.cojen.tupl.Transaction,%20byte[])">load</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
     byte[]&nbsp;key)</code>
@@ -250,7 +261,7 @@
  entry exists.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#load(org.cojen.tupl.Transaction,%20byte[])">load</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
     byte[]&nbsp;key)</code>
@@ -258,21 +269,21 @@
  entry exists.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#lockCheck(org.cojen.tupl.Transaction,%20byte[])">lockCheck</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
          byte[]&nbsp;key)</code>
 <div class="block">Checks the lock ownership for the given key.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#lockCheck(org.cojen.tupl.Transaction,%20byte[])">lockCheck</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
          byte[]&nbsp;key)</code>
 <div class="block">Checks the lock ownership for the given key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#lockExclusive(org.cojen.tupl.Transaction,%20byte[])">lockExclusive</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
              byte[]&nbsp;key)</code>
@@ -280,7 +291,7 @@
  locks.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#lockExclusive(org.cojen.tupl.Transaction,%20byte[])">lockExclusive</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
              byte[]&nbsp;key)</code>
@@ -288,21 +299,21 @@
  locks.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#lockShared(org.cojen.tupl.Transaction,%20byte[])">lockShared</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
           byte[]&nbsp;key)</code>
 <div class="block">Explicitly acquire a shared lock for the given key, denying exclusive locks.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#lockShared(org.cojen.tupl.Transaction,%20byte[])">lockShared</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
           byte[]&nbsp;key)</code>
 <div class="block">Explicitly acquire a shared lock for the given key, denying exclusive locks.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#lockUpgradable(org.cojen.tupl.Transaction,%20byte[])">lockUpgradable</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
               byte[]&nbsp;key)</code>
@@ -310,7 +321,7 @@
  additional upgradable locks.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#lockUpgradable(org.cojen.tupl.Transaction,%20byte[])">lockUpgradable</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
               byte[]&nbsp;key)</code>
@@ -318,15 +329,15 @@
  additional upgradable locks.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/Cursor.html" title="interface in org.cojen.tupl">Cursor</a></code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#newCursor(org.cojen.tupl.Transaction)">newCursor</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/Cursor.html" title="interface in org.cojen.tupl">Cursor</a></code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#newCursor(org.cojen.tupl.Transaction)">newCursor</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn)</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#remove(org.cojen.tupl.Transaction,%20byte[],%20byte[])">remove</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -335,7 +346,7 @@
  value matches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#remove(org.cojen.tupl.Transaction,%20byte[],%20byte[])">remove</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -344,7 +355,7 @@
  value matches.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AbstractView.</span><code><strong><a href="../../../../org/cojen/tupl/AbstractView.html#remove(org.cojen.tupl.Transaction,%20byte[],%20byte[])">remove</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -353,7 +364,7 @@
  value matches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#replace(org.cojen.tupl.Transaction,%20byte[],%20byte[])">replace</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
        byte[]&nbsp;key,
@@ -362,7 +373,7 @@
  already exists.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#replace(org.cojen.tupl.Transaction,%20byte[],%20byte[])">replace</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
        byte[]&nbsp;key,
@@ -371,7 +382,7 @@
  already exists.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#store(org.cojen.tupl.Transaction,%20byte[],%20byte[])">store</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
      byte[]&nbsp;key,
@@ -379,7 +390,7 @@
 <div class="block">Unconditionally associates a value with the given key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#store(org.cojen.tupl.Transaction,%20byte[],%20byte[])">store</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
      byte[]&nbsp;key,
@@ -387,7 +398,7 @@
 <div class="block">Unconditionally associates a value with the given key.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">View.</span><code><strong><a href="../../../../org/cojen/tupl/View.html#update(org.cojen.tupl.Transaction,%20byte[],%20byte[],%20byte[])">update</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -397,7 +408,7 @@
  matches.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">Index.</span><code><strong><a href="../../../../org/cojen/tupl/Index.html#update(org.cojen.tupl.Transaction,%20byte[],%20byte[],%20byte[])">update</a></strong>(<a href="../../../../org/cojen/tupl/Transaction.html" title="class in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
