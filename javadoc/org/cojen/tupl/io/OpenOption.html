@@ -142,11 +142,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html?is
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/cojen/tupl/io/OpenOption.html#NON_DURABLE">NON_DURABLE</a></strong></code>
+<div class="block">File contents don't persist after an OS crash or power failure.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../org/cojen/tupl/io/OpenOption.html#READ_ONLY">READ_ONLY</a></strong></code>
 <div class="block">Open file in read-only mode.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../org/cojen/tupl/io/OpenOption.html#SYNC_IO">SYNC_IO</a></strong></code>
 <div class="block">All file I/O should be durable.</div>
 </td>
@@ -251,11 +256,21 @@ the order they are declared.</div>
 <a name="DIRECT_IO">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DIRECT_IO</h4>
 <pre>public static final&nbsp;<a href="../../../../org/cojen/tupl/io/OpenOption.html" title="enum in org.cojen.tupl.io">OpenOption</a> DIRECT_IO</pre>
 <div class="block">All file I/O should be durable and bypass the file system cache, if possible.</div>
+</li>
+</ul>
+<a name="NON_DURABLE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NON_DURABLE</h4>
+<pre>public static final&nbsp;<a href="../../../../org/cojen/tupl/io/OpenOption.html" title="enum in org.cojen.tupl.io">OpenOption</a> NON_DURABLE</pre>
+<div class="block">File contents don't persist after an OS crash or power failure.</div>
 </li>
 </ul>
 </li>
