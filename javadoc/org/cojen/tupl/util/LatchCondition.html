@@ -171,6 +171,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/util/LatchCondition.html#signalAll()">signalAll</a></strong>()</code>
+<div class="block">Signals all waiters, of any type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/util/LatchCondition.html#signalNext()">signalNext</a></strong>()</code>
+<div class="block">Signals the first waiter, of any type.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/cojen/tupl/util/LatchCondition.html#signalNextShared()">signalNextShared</a></strong>()</code>
 <div class="block">Signals the first waiter, but only if it's a shared waiter.</div>
@@ -271,6 +283,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>signal</h4>
 <pre>public&nbsp;void&nbsp;signal()</pre>
 <div class="block">Signals the first waiter, of any type. Caller must hold shared or exclusive latch.</div>
+</li>
+</ul>
+<a name="signalNext()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>signalNext</h4>
+<pre>public&nbsp;boolean&nbsp;signalNext()</pre>
+<div class="block">Signals the first waiter, of any type. Caller must hold shared or exclusive latch.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>false if no waiters of any type exist</dd></dl>
+</li>
+</ul>
+<a name="signalAll()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>signalAll</h4>
+<pre>public&nbsp;void&nbsp;signalAll()</pre>
+<div class="block">Signals all waiters, of any type. Caller must hold shared or exclusive latch.</div>
 </li>
 </ul>
 <a name="signalShared()">
