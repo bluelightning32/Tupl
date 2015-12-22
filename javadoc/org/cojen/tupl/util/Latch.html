@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -217,72 +217,84 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/l
 </td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#initExclusive--">initExclusive</a></span>()</code>
+<div class="block">Set the latch state to be held exclusive, to be called only by the constructor.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#initShared--">initShared</a></span>()</code>
+<div class="block">Set the latch state to be held shared, to be called only by the constructor.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#release-boolean-">release</a></span>(boolean&nbsp;exclusive)</code>
 <div class="block">Convenience method, which releases the held exclusive or shared latch.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#releaseEither--">releaseEither</a></span>()</code>
 <div class="block">Releases exclusive or shared latch.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#releaseExclusive--">releaseExclusive</a></span>()</code>
 <div class="block">Release the held exclusive latch.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#releaseShared--">releaseShared</a></span>()</code>
 <div class="block">Release a held shared latch.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquire-int-">tryAcquire</a></span>(int&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquireExclusive--">tryAcquireExclusive</a></span>()</code>
 <div class="block">Attempt to acquire the exclusive latch, barging ahead of any waiting
  threads if possible.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquireExclusiveNanos-long-">tryAcquireExclusiveNanos</a></span>(long&nbsp;nanosTimeout)</code>
 <div class="block">Attempt to acquire the exclusive latch, aborting if interrupted.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquireShared--">tryAcquireShared</a></span>()</code>
 <div class="block">Attempt to acquire a shared latch, barging ahead of any waiting threads
  if possible.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquireShared-int-">tryAcquireShared</a></span>(int&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryAcquireSharedNanos-long-">tryAcquireSharedNanos</a></span>(long&nbsp;nanosTimeout)</code>
 <div class="block">Attempt to acquire a shared latch, aborting if interrupted.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryRelease-int-">tryRelease</a></span>(int&nbsp;newState)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryReleaseShared-int-">tryReleaseShared</a></span>(int&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/util/Latch.html#tryUpgrade--">tryUpgrade</a></span>()</code>
 <div class="block">Attempt to upgrade a held shared latch into an exclusive latch.</div>
@@ -553,7 +565,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/l
 <a name="tryRelease-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>tryRelease</h4>
 <pre>protected final&nbsp;boolean&nbsp;tryRelease(int&nbsp;newState)</pre>
@@ -561,6 +573,26 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/l
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/AbstractQueuedSynchronizer.html?is-external=true#tryRelease-int-" title="class or interface in java.util.concurrent.locks">tryRelease</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/AbstractQueuedSynchronizer.html?is-external=true" title="class or interface in java.util.concurrent.locks">AbstractQueuedSynchronizer</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="initExclusive--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initExclusive</h4>
+<pre>protected final&nbsp;void&nbsp;initExclusive()</pre>
+<div class="block">Set the latch state to be held exclusive, to be called only by the constructor.</div>
+</li>
+</ul>
+<a name="initShared--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>initShared</h4>
+<pre>protected final&nbsp;void&nbsp;initShared()</pre>
+<div class="block">Set the latch state to be held shared, to be called only by the constructor.</div>
 </li>
 </ul>
 </li>
