@@ -795,6 +795,8 @@
 <dd>
 <div class="block">Unconditionally associates a value with the given key, returning the previous value.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#EXCLUSIVE">EXCLUSIVE</a></span> - Static variable in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Transaction.html#exit--">exit()</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a></dt>
 <dd>
 <div class="block">Exits the current transaction scope, rolling back all uncommitted
@@ -1110,14 +1112,6 @@
 <div class="block">Called to initialize a new or re-used <a href="http://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html?is-external=true" title="class or interface in javax.crypto"><code>Cipher</code></a>, using the given initialization
  vector.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#initExclusive--">initExclusive()</a></span> - Method in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
-<dd>
-<div class="block">Set the latch state to be held exclusive, to be called only by the constructor.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#initShared--">initShared()</a></span> - Method in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
-<dd>
-<div class="block">Set the latch state to be held shared, to be called only by the constructor.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/View.html#insert-org.cojen.tupl.Transaction-byte:A-byte:A-">insert(Transaction, byte[], byte[])</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></dt>
 <dd>
 <div class="block">Associates a value with the given key, unless a corresponding value
@@ -1265,6 +1259,8 @@
 <div class="block">Non-reentrant read/write latch, using unfair acquisition.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#Latch--">Latch()</a></span> - Constructor for class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#Latch-int-">Latch(int)</a></span> - Constructor for class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cojen/tupl/util/LatchCondition.html" title="class in org.cojen.tupl.util"><span class="typeNameLink">LatchCondition</span></a> - Class in <a href="org/cojen/tupl/util/package-summary.html">org.cojen.tupl.util</a></dt>
 <dd>
@@ -1893,6 +1889,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/io/StripedPageArray.html#setPageCount-long-">setPageCount(long)</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#SHARED">SHARED</a></span> - Static variable in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Database.html#shutdown--">shutdown()</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Database.html" title="interface in org.cojen.tupl">Database</a></dt>
 <dd>
 <div class="block">Cleanly closes the database, ensuring durability of all modifications.</div>
@@ -2169,6 +2167,8 @@
 <dd>
 <div class="block">Non-transactionally apply an idempotent undo operation.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#UNLATCHED">UNLATCHED</a></span> - Static variable in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Transaction.html#unlock--">unlock()</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a></dt>
 <dd>
 <div class="block">Fully releases last lock acquired, within the current scope.</div>
@@ -2479,6 +2479,6 @@ the order they are declared.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2015 <a href="https://github.com/cojen">Cojen</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2016 <a href="https://github.com/cojen">Cojen</a>. All rights reserved.</small></p>
 </body>
 </html>
