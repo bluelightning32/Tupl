@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":18,"i1":6,"i2":18,"i3":18,"i4":18,"i5":6,"i6":18,"i7":18,"i8":6,"i9":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -126,13 +126,13 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#decryptPage-long-int-byte:A-int-">decryptPage</a></span>(long&nbsp;pageIndex,
            int&nbsp;pageSize,
            byte[]&nbsp;page,
@@ -154,7 +154,29 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#decryptPage-long-int-long-int-">decryptPage</a></span>(long&nbsp;pageIndex,
+           int&nbsp;pageSize,
+           long&nbsp;pagePtr,
+           int&nbsp;pageOffset)</code>
+<div class="block">Called by multiple threads to decrypt a fixed-size database
+ page.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#decryptPage-long-int-long-int-long-int-">decryptPage</a></span>(long&nbsp;pageIndex,
+           int&nbsp;pageSize,
+           long&nbsp;srcPtr,
+           int&nbsp;srcOffset,
+           long&nbsp;dstPtr,
+           int&nbsp;dstOffset)</code>
+<div class="block">Called by multiple threads to decrypt a fixed-size database
+ page.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#encryptPage-long-int-byte:A-int-">encryptPage</a></span>(long&nbsp;pageIndex,
            int&nbsp;pageSize,
            byte[]&nbsp;page,
@@ -163,7 +185,7 @@ var activeTableTab = "activeTableTab";
  page.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#encryptPage-long-int-byte:A-int-byte:A-int-">encryptPage</a></span>(long&nbsp;pageIndex,
            int&nbsp;pageSize,
@@ -175,14 +197,36 @@ var activeTableTab = "activeTableTab";
  page.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#encryptPage-long-int-long-int-">encryptPage</a></span>(long&nbsp;pageIndex,
+           int&nbsp;pageSize,
+           long&nbsp;pagePtr,
+           int&nbsp;pageOffset)</code>
+<div class="block">Called by multiple threads to encrypt a fixed-size database
+ page.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#encryptPage-long-int-long-int-long-int-">encryptPage</a></span>(long&nbsp;pageIndex,
+           int&nbsp;pageSize,
+           long&nbsp;srcPtr,
+           int&nbsp;srcOffset,
+           long&nbsp;dstPtr,
+           int&nbsp;dstOffset)</code>
+<div class="block">Called by multiple threads to encrypt a fixed-size database
+ page.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#newDecryptingStream-long-java.io.InputStream-">newDecryptingStream</a></span>(long&nbsp;id,
                    <a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in)</code>
 <div class="block">Called to wrap an InputStream for supporting decryption.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Crypto.html#newEncryptingStream-long-java.io.OutputStream-">newEncryptingStream</a></span>(long&nbsp;id,
                    <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
@@ -210,11 +254,11 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>encryptPage</h4>
-<pre>void&nbsp;encryptPage(long&nbsp;pageIndex,
-                 int&nbsp;pageSize,
-                 byte[]&nbsp;page,
-                 int&nbsp;pageOffset)
-          throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<pre>default&nbsp;void&nbsp;encryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         byte[]&nbsp;page,
+                         int&nbsp;pageOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block">Called by multiple threads to encrypt a fixed-size database
  page. Encrypted length must exactly match original length.</div>
 <dl>
@@ -254,17 +298,67 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="encryptPage-long-int-long-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encryptPage</h4>
+<pre>default&nbsp;void&nbsp;encryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         long&nbsp;pagePtr,
+                         int&nbsp;pageOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Called by multiple threads to encrypt a fixed-size database
+ page. Encrypted length must exactly match original length.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageIndex</code> - page index within database</dd>
+<dd><code>pagePtr</code> - initially the original unencrypted page; replaced with encrypted page</dd>
+<dd><code>pageOffset</code> - offset into page</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="encryptPage-long-int-long-int-long-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encryptPage</h4>
+<pre>default&nbsp;void&nbsp;encryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         long&nbsp;srcPtr,
+                         int&nbsp;srcOffset,
+                         long&nbsp;dstPtr,
+                         int&nbsp;dstOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Called by multiple threads to encrypt a fixed-size database
+ page. Encrypted length must exactly match original length.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageIndex</code> - page index within database</dd>
+<dd><code>srcPtr</code> - original unencrypted page</dd>
+<dd><code>srcOffset</code> - offset into unencrypted page</dd>
+<dd><code>dstPtr</code> - destination for encrypted page</dd>
+<dd><code>dstOffset</code> - offset into encrypted page</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="decryptPage-long-int-byte:A-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>decryptPage</h4>
-<pre>void&nbsp;decryptPage(long&nbsp;pageIndex,
-                 int&nbsp;pageSize,
-                 byte[]&nbsp;page,
-                 int&nbsp;pageOffset)
-          throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<pre>default&nbsp;void&nbsp;decryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         byte[]&nbsp;page,
+                         int&nbsp;pageOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block">Called by multiple threads to decrypt a fixed-size database
  page. Decrypted length must exactly match encrypted length.</div>
 <dl>
@@ -298,6 +392,56 @@ var activeTableTab = "activeTableTab";
 <dd><code>src</code> - encrypted page</dd>
 <dd><code>srcOffset</code> - offset into encrypted page</dd>
 <dd><code>dst</code> - destination for decrypted page</dd>
+<dd><code>dstOffset</code> - offset into decrypted page</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="decryptPage-long-int-long-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decryptPage</h4>
+<pre>default&nbsp;void&nbsp;decryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         long&nbsp;pagePtr,
+                         int&nbsp;pageOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Called by multiple threads to decrypt a fixed-size database
+ page. Decrypted length must exactly match encrypted length.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageIndex</code> - page index within database</dd>
+<dd><code>pagePtr</code> - initially the encrypted page; replaced with decrypted page</dd>
+<dd><code>pageOffset</code> - offset into page</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="decryptPage-long-int-long-int-long-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decryptPage</h4>
+<pre>default&nbsp;void&nbsp;decryptPage(long&nbsp;pageIndex,
+                         int&nbsp;pageSize,
+                         long&nbsp;srcPtr,
+                         int&nbsp;srcOffset,
+                         long&nbsp;dstPtr,
+                         int&nbsp;dstOffset)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Called by multiple threads to decrypt a fixed-size database
+ page. Decrypted length must exactly match encrypted length.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageIndex</code> - page index within database</dd>
+<dd><code>srcPtr</code> - encrypted page</dd>
+<dd><code>srcOffset</code> - offset into encrypted page</dd>
+<dd><code>dstPtr</code> - destination for decrypted page</dd>
 <dd><code>dstOffset</code> - offset into decrypted page</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
