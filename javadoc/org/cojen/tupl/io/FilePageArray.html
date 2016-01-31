@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -189,26 +189,41 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#readPage-long-byte:A-int-int-">readPage</a></span>(long&nbsp;index,
-        byte[]&nbsp;buf,
+        byte[]&nbsp;dst,
         int&nbsp;offset,
         int&nbsp;length)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#readPage-long-long-int-int-">readPage</a></span>(long&nbsp;index,
+        long&nbsp;dstPtr,
+        int&nbsp;offset,
+        int&nbsp;length)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#setPageCount-long-">setPageCount</a></span>(long&nbsp;count)</code>
 <div class="block">Set the total count of pages, truncating or growing the array as necessary.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#sync-boolean-">sync</a></span>(boolean&nbsp;metadata)</code>
 <div class="block">Durably flushes all writes to the underlying device.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#writePage-long-byte:A-int-">writePage</a></span>(long&nbsp;index,
-         byte[]&nbsp;buf,
+         byte[]&nbsp;src,
+         int&nbsp;offset)</code>
+<div class="block">Writes a page, which is lazily flushed.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/io/FilePageArray.html#writePage-long-long-int-">writePage</a></span>(long&nbsp;index,
+         long&nbsp;srcPtr,
          int&nbsp;offset)</code>
 <div class="block">Writes a page, which is lazily flushed.</div>
 </td>
@@ -219,7 +234,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.cojen.tupl.io.<a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></h3>
-<code><a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-byte:A-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-byte:A-int-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#close--">close</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPage-long-long-">copyPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPageFromPointer-long-long-">copyPageFromPointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#directPagePointer-long-">directPagePointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage-long-byte:A-">evictPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCountLimit--">getPageCountLimit</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#pageSize--">pageSize</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#readPage-long-byte:A-">readPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#syncPage-long-">syncPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#uncachePage-long-">uncachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-byte:A-">writePage</a></code></li>
+<code><a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-byte:A-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-byte:A-int-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-long-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#cachePage-long-long-int-">cachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#close--">close</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPage-long-long-">copyPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#copyPageFromPointer-long-long-">copyPageFromPointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#directPagePointer-long-">directPagePointer</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage-long-byte:A-">evictPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#evictPage-long-long-">evictPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#getPageCountLimit--">getPageCountLimit</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#pageSize--">pageSize</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#readPage-long-byte:A-">readPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#readPage-long-long-">readPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#syncPage-long-">syncPage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#uncachePage-long-">uncachePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-byte:A-">writePage</a>, <a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-long-">writePage</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -357,7 +372,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <li class="blockList">
 <h4>readPage</h4>
 <pre>public&nbsp;void&nbsp;readPage(long&nbsp;index,
-                     byte[]&nbsp;buf,
+                     byte[]&nbsp;dst,
                      int&nbsp;offset,
                      int&nbsp;length)
               throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -366,7 +381,30 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <dd><code><a href="../../../../org/cojen/tupl/io/PageArray.html#readPage-long-byte:A-int-int-">readPage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - zero-based page index to read</dd>
-<dd><code>buf</code> - receives read data</dd>
+<dd><code>dst</code> - receives read data</dd>
+<dd><code>offset</code> - offset into data dstfer</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if index is greater than or equal to page count</dd>
+</dl>
+</li>
+</ul>
+<a name="readPage-long-long-int-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readPage</h4>
+<pre>public&nbsp;void&nbsp;readPage(long&nbsp;index,
+                     long&nbsp;dstPtr,
+                     int&nbsp;offset,
+                     int&nbsp;length)
+              throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../org/cojen/tupl/io/PageArray.html#readPage-long-long-int-int-">readPage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - zero-based page index to read</dd>
+<dd><code>dstPtr</code> - receives read data</dd>
 <dd><code>offset</code> - offset into data buffer</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if index is greater than or equal to page count</dd>
@@ -380,7 +418,7 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <li class="blockList">
 <h4>writePage</h4>
 <pre>public&nbsp;void&nbsp;writePage(long&nbsp;index,
-                      byte[]&nbsp;buf,
+                      byte[]&nbsp;src,
                       int&nbsp;offset)
                throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-byte:A-int-">PageArray</a></code></span></div>
@@ -392,7 +430,33 @@ extends <a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in o
 <dd><code><a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-byte:A-int-">writePage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - zero-based page index to write</dd>
-<dd><code>buf</code> - data to write</dd>
+<dd><code>src</code> - data to write</dd>
+<dd><code>offset</code> - offset into data buffer</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="writePage-long-long-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writePage</h4>
+<pre>public&nbsp;void&nbsp;writePage(long&nbsp;index,
+                      long&nbsp;srcPtr,
+                      int&nbsp;offset)
+               throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-long-int-">PageArray</a></code></span></div>
+<div class="block">Writes a page, which is lazily flushed. The array grows automatically if the index is
+ greater than or equal to the current page count. If array supports caching, page must be
+ immediately copied into it.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../org/cojen/tupl/io/PageArray.html#writePage-long-long-int-">writePage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - zero-based page index to write</dd>
+<dd><code>srcPtr</code> - data to write</dd>
 <dd><code>offset</code> - offset into data buffer</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
