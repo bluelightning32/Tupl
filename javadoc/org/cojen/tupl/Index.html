@@ -176,12 +176,11 @@ extends <a href="../../../org/cojen/tupl/View.html" title="interface in org.coje
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-byte:A:A-byte:A:A-int-">evict</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.EvictionPredicate-boolean-">evict</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
      byte[]&nbsp;lowKey,
      byte[]&nbsp;highKey,
-     byte[][]&nbsp;keyRef,
-     byte[][]&nbsp;valueRef,
-     int&nbsp;maxEntriesToEvict)</code>
+     <a href="../../../org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl">EvictionPredicate</a>&nbsp;evictionPredicate,
+     boolean&nbsp;autoLoad)</code>
 <div class="block">Select an entry to delete from the index, possibly at random.</div>
 </td>
 </tr>
@@ -268,7 +267,7 @@ extends <a href="../../../org/cojen/tupl/View.html" title="interface in org.coje
 </dl>
 </li>
 </ul>
-<a name="evict-org.cojen.tupl.Transaction-byte:A-byte:A-byte:A:A-byte:A:A-int-">
+<a name="evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.EvictionPredicate-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -277,9 +276,8 @@ extends <a href="../../../org/cojen/tupl/View.html" title="interface in org.coje
 <pre>long&nbsp;evict(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
            byte[]&nbsp;lowKey,
            byte[]&nbsp;highKey,
-           byte[][]&nbsp;keyRef,
-           byte[][]&nbsp;valueRef,
-           int&nbsp;maxEntriesToEvict)
+           <a href="../../../org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl">EvictionPredicate</a>&nbsp;evictionPredicate,
+           boolean&nbsp;autoLoad)
     throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Select an entry to delete from the index, possibly at random. Implementation should
  attempt to evict an entry which hasn't been recently used. It might fail to evict any
@@ -289,9 +287,8 @@ extends <a href="../../../org/cojen/tupl/View.html" title="interface in org.coje
 <dd><code>txn</code> - optional</dd>
 <dd><code>lowKey</code> - inclusive lowest key in the evictable range; pass null for open range</dd>
 <dd><code>highKey</code> - exclusive highest key in the evictable range; pass null for open range</dd>
-<dd><code>keyRef</code> - optional, pass non-null to receive a copy of the evicted key</dd>
-<dd><code>valueRef</code> - optional, pass non-null to receive a copy of the evicted value</dd>
-<dd><code>maxEntriesToEvict</code> - maximum number of records to evict</dd>
+<dd><code>evictionPredicate</code> - callback to customize eviction decisions; pass null to evict all</dd>
+<dd><code>autoLoad,</code> - pass true to also load values</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>sum of the key and value lengths which were evicted, 0 if no records are evicted</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
