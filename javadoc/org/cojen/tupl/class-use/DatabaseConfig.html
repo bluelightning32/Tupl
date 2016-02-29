@@ -186,32 +186,39 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
+<td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#directPageAccess-boolean-">directPageAccess</a></span>(boolean&nbsp;direct)</code>
+<div class="block">Set true to allocate all pages off the Java heap, offering increased performance and
+ reduced garbage collection activity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#durabilityMode-org.cojen.tupl.DurabilityMode-">durabilityMode</a></span>(<a href="../../../../org/cojen/tupl/DurabilityMode.html" title="enum in org.cojen.tupl">DurabilityMode</a>&nbsp;durabilityMode)</code>
 <div class="block">Set the default transaction durability mode, which is <a href="../../../../org/cojen/tupl/DurabilityMode.html#SYNC"><code>SYNC</code></a> if not overridden.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#encrypt-org.cojen.tupl.Crypto-">encrypt</a></span>(<a href="../../../../org/cojen/tupl/Crypto.html" title="interface in org.cojen.tupl">Crypto</a>&nbsp;crypto)</code>
 <div class="block">Enable full encryption of the data files, transaction logs, snapshots, and cache priming
  sets.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#eventListener-org.cojen.tupl.EventListener-">eventListener</a></span>(<a href="../../../../org/cojen/tupl/EventListener.html" title="interface in org.cojen.tupl">EventListener</a>&nbsp;listener)</code>
 <div class="block">Set a listener which receives notifications of actions being performed
  by the database.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#fileFactory-org.cojen.tupl.io.FileFactory-">fileFactory</a></span>(<a href="../../../../org/cojen/tupl/io/FileFactory.html" title="interface in org.cojen.tupl.io">FileFactory</a>&nbsp;factory)</code>
 <div class="block">Optionally define a custom factory for every file and directory created by the
  database.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#lockTimeout-long-java.util.concurrent.TimeUnit-">lockTimeout</a></span>(long&nbsp;timeout,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;unit)</code>
@@ -219,57 +226,57 @@
  overridden.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#lockUpgradeRule-org.cojen.tupl.LockUpgradeRule-">lockUpgradeRule</a></span>(<a href="../../../../org/cojen/tupl/LockUpgradeRule.html" title="enum in org.cojen.tupl">LockUpgradeRule</a>&nbsp;lockUpgradeRule)</code>
 <div class="block">Set the default lock upgrade rule, which is <a href="../../../../org/cojen/tupl/LockUpgradeRule.html#STRICT"><code>STRICT</code></a> if not
  overridden.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#mapDataFiles-boolean-">mapDataFiles</a></span>(boolean&nbsp;mapped)</code>
 <div class="block">Enable memory mapping of the data files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#maxCacheSize-long-">maxCacheSize</a></span>(long&nbsp;maxBytes)</code>
 <div class="block">Set the maximum cache size, overriding the default.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#maxReplicaThreads-int-">maxReplicaThreads</a></span>(int&nbsp;num)</code>
 <div class="block">If replication is enabled, specify the maximum number of threads to process incoming
  changes.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#minCacheSize-long-">minCacheSize</a></span>(long&nbsp;minBytes)</code>
 <div class="block">Set the minimum cache size, overriding the default.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#pageSize-int-">pageSize</a></span>(int&nbsp;size)</code>
 <div class="block">Set the page size, which is 4096 bytes by default.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#replicate-org.cojen.tupl.ext.ReplicationManager-">replicate</a></span>(<a href="../../../../org/cojen/tupl/ext/ReplicationManager.html" title="interface in org.cojen.tupl.ext">ReplicationManager</a>&nbsp;manager)</code>
 <div class="block">Enable replication by providing a <a href="../../../../org/cojen/tupl/ext/ReplicationManager.html" title="interface in org.cojen.tupl.ext"><code>ReplicationManager</code></a> instance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#secondaryCacheSize-long-">secondaryCacheSize</a></span>(long&nbsp;size)</code>
 <div class="block">Set the size of the secondary off-heap cache, which is empty by default.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatabaseConfig.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/DatabaseConfig.html#syncWrites-boolean-">syncWrites</a></span>(boolean&nbsp;fileSync)</code>
 <div class="block">Set true to ensure all writes to the main database file are immediately
