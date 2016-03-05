@@ -103,10 +103,6 @@
 <dd>
 <div class="block">Returns true if lock was already owned when requested.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/cojen/tupl/EvictionPredicate.html#ALWAYS_EVICT">ALWAYS_EVICT</a></span> - Static variable in interface org.cojen.tupl.<a href="org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl">EvictionPredicate</a></dt>
-<dd>
-<div class="block">Default eviction predicate: always deletes entries.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Index.html#analyze-byte:A-byte:A-">analyze(byte[], byte[])</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
 <dd>
 <div class="block">Estimates the size of this index with a single random probe.</div>
@@ -817,13 +813,9 @@
 <dd>
 <div class="block">Event type category.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.EvictionPredicate-boolean-">evict(Transaction, byte[], byte[], EvictionPredicate, boolean)</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.Filter-boolean-">evict(Transaction, byte[], byte[], Filter, boolean)</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
 <dd>
-<div class="block">Select an entry to delete from the index, possibly at random.</div>
-</dd>
-<dt><a href="org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl"><span class="typeNameLink">EvictionPredicate</span></a> - Interface in <a href="org/cojen/tupl/package-summary.html">org.cojen.tupl</a></dt>
-<dd>
-<div class="block">Class to customize the <a href="org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.EvictionPredicate-boolean-"><code>Index.evict(org.cojen.tupl.Transaction, byte[], byte[], org.cojen.tupl.EvictionPredicate, boolean)</code></a> method behavior.</div>
+<div class="block">Select a few entries, and delete them from the index.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/io/PageArray.html#evictPage-long-byte:A-">evictPage(long, byte[])</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
 <dd>
@@ -1952,10 +1944,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/util/Latch.html#SHARED">SHARED</a></span> - Static variable in class org.cojen.tupl.util.<a href="org/cojen/tupl/util/Latch.html" title="class in org.cojen.tupl.util">Latch</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/cojen/tupl/EvictionPredicate.html#shouldEvict-org.cojen.tupl.Transaction-byte:A-byte:A-">shouldEvict(Transaction, byte[], byte[])</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl">EvictionPredicate</a></dt>
-<dd>
-<div class="block">Called after the cursor is positioned at a candidate entry.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Database.html#shutdown--">shutdown()</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Database.html" title="interface in org.cojen.tupl">Database</a></dt>
 <dd>
 <div class="block">Cleanly closes the database, ensuring durability of all modifications.</div>

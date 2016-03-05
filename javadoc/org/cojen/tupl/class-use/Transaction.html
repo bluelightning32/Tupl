@@ -181,12 +181,12 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><span class="typeNameLabel">Index.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.EvictionPredicate-boolean-">evict</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+<td class="colLast"><span class="typeNameLabel">Index.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/Index.html#evict-org.cojen.tupl.Transaction-byte:A-byte:A-org.cojen.tupl.Filter-boolean-">evict</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
      byte[]&nbsp;lowKey,
      byte[]&nbsp;highKey,
-     <a href="../../../../org/cojen/tupl/EvictionPredicate.html" title="interface in org.cojen.tupl">EvictionPredicate</a>&nbsp;evictionPredicate,
-     boolean&nbsp;autoLoad)</code>
-<div class="block">Select an entry to delete from the index, possibly at random.</div>
+     <a href="../../../../org/cojen/tupl/Filter.html" title="interface in org.cojen.tupl">Filter</a>&nbsp;evictionFilter,
+     boolean&nbsp;autoload)</code>
+<div class="block">Select a few entries, and delete them from the index.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -279,14 +279,6 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">EvictionPredicate.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/EvictionPredicate.html#shouldEvict-org.cojen.tupl.Transaction-byte:A-byte:A-">shouldEvict</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
-           byte[]&nbsp;key,
-           byte[]&nbsp;value)</code>
-<div class="block">Called after the cursor is positioned at a candidate entry.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">View.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/View.html#store-org.cojen.tupl.Transaction-byte:A-byte:A-">store</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
      byte[]&nbsp;key,
@@ -294,7 +286,7 @@
 <div class="block">Unconditionally associates a value with the given key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">View.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/View.html#update-org.cojen.tupl.Transaction-byte:A-byte:A-byte:A-">update</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
