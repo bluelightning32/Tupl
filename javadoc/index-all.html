@@ -994,6 +994,8 @@
 <div class="block">Called to generate a key, using the <a href="org/cojen/tupl/CipherCrypto.html#algorithm--"><code>algorithm</code></a> and <a href="org/cojen/tupl/CipherCrypto.html#keySize--"><code>key
  size</code></a> of this instance.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/DatabaseConfig.html#getCustomTransactionHandler--">getCustomTransactionHandler()</a></span> - Method in class org.cojen.tupl.<a href="org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/DeadlockException.html#getDeadlockSet--">getDeadlockSet()</a></span> - Method in exception org.cojen.tupl.<a href="org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Index.html#getId--">getId()</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a></dt>
@@ -1639,6 +1641,14 @@
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/io/FileIO.html#open-java.io.File-java.util.EnumSet-int-">open(File, EnumSet&lt;OpenOption&gt;, int)</a></span> - Static method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io">FileIO</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/io/MappedPageArray.html#open-int-long-java.io.File-java.util.EnumSet-">open(int, long, File, EnumSet&lt;OpenOption&gt;)</a></span> - Static method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/io/MappedPageArray.html#open--">open()</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/MappedPageArray.html" title="class in org.cojen.tupl.io">MappedPageArray</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/io/PageArray.html#open--">open()</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/PageArray.html" title="class in org.cojen.tupl.io">PageArray</a></dt>
+<dd>
+<div class="block">Attempt to open or reopen the page array.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/io/StripedPageArray.html#open--">open()</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/StripedPageArray.html" title="class in org.cojen.tupl.io">StripedPageArray</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/Database.html#openIndex-byte:A-">openIndex(byte[])</a></span> - Method in interface org.cojen.tupl.<a href="org/cojen/tupl/Database.html" title="interface in org.cojen.tupl">Database</a></dt>
 <dd>
@@ -2461,6 +2471,11 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/cojen/tupl/io/FileIO.html#write-long-long-int-int-">write(long, long, int, int)</a></span> - Method in class org.cojen.tupl.io.<a href="org/cojen/tupl/io/FileIO.html" title="class in org.cojen.tupl.io">FileIO</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/cojen/tupl/ext/ReplicationManager.Writer.html#writeCommit-byte:A-int-int-">writeCommit(byte[], int, int)</a></span> - Method in interface org.cojen.tupl.ext.<a href="org/cojen/tupl/ext/ReplicationManager.Writer.html" title="interface in org.cojen.tupl.ext">ReplicationManager.Writer</a></dt>
+<dd>
+<div class="block">Same as the regular write method, except that the message contains a transaction
+ commit operation.</div>
+</dd>
 <dt><a href="org/cojen/tupl/WriteFailureException.html" title="class in org.cojen.tupl"><span class="typeNameLink">WriteFailureException</span></a> - Exception in <a href="org/cojen/tupl/package-summary.html">org.cojen.tupl</a></dt>
 <dd>
 <div class="block">Thrown when writing to the underlying storage device failed.</div>

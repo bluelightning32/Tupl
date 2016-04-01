@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -273,6 +273,10 @@ implements <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable
 </td>
 </tr>
 <tr id="i17" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/cojen/tupl/ext/TransactionHandler.html" title="interface in org.cojen.tupl.ext">TransactionHandler</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#getCustomTransactionHandler--">getCustomTransactionHandler</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#lockTimeout-long-java.util.concurrent.TimeUnit-">lockTimeout</a></span>(long&nbsp;timeout,
            <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;unit)</code>
@@ -280,57 +284,57 @@ implements <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable
  overridden.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#lockUpgradeRule-org.cojen.tupl.LockUpgradeRule-">lockUpgradeRule</a></span>(<a href="../../../org/cojen/tupl/LockUpgradeRule.html" title="enum in org.cojen.tupl">LockUpgradeRule</a>&nbsp;lockUpgradeRule)</code>
 <div class="block">Set the default lock upgrade rule, which is <a href="../../../org/cojen/tupl/LockUpgradeRule.html#STRICT"><code>STRICT</code></a> if not
  overridden.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#mapDataFiles-boolean-">mapDataFiles</a></span>(boolean&nbsp;mapped)</code>
 <div class="block">Enable memory mapping of the data files.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#maxCacheSize-long-">maxCacheSize</a></span>(long&nbsp;maxBytes)</code>
 <div class="block">Set the maximum cache size, overriding the default.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#maxReplicaThreads-int-">maxReplicaThreads</a></span>(int&nbsp;num)</code>
 <div class="block">If replication is enabled, specify the maximum number of threads to process incoming
  changes.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#minCacheSize-long-">minCacheSize</a></span>(long&nbsp;minBytes)</code>
 <div class="block">Set the minimum cache size, overriding the default.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#pageSize-int-">pageSize</a></span>(int&nbsp;size)</code>
 <div class="block">Set the page size, which is 4096 bytes by default.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#replicate-org.cojen.tupl.ext.ReplicationManager-">replicate</a></span>(<a href="../../../org/cojen/tupl/ext/ReplicationManager.html" title="interface in org.cojen.tupl.ext">ReplicationManager</a>&nbsp;manager)</code>
 <div class="block">Enable replication by providing a <a href="../../../org/cojen/tupl/ext/ReplicationManager.html" title="interface in org.cojen.tupl.ext"><code>ReplicationManager</code></a> instance.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#secondaryCacheSize-long-">secondaryCacheSize</a></span>(long&nbsp;size)</code>
 <div class="block">Set the size of the secondary off-heap cache, which is empty by default.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/DatabaseConfig.html#syncWrites-boolean-">syncWrites</a></span>(boolean&nbsp;fileSync)</code>
 <div class="block">Set true to ensure all writes to the main database file are immediately
@@ -704,6 +708,15 @@ implements <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable
 <h4>customTransactionHandler</h4>
 <pre>public&nbsp;<a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a>&nbsp;customTransactionHandler(<a href="../../../org/cojen/tupl/ext/TransactionHandler.html" title="interface in org.cojen.tupl.ext">TransactionHandler</a>&nbsp;handler)</pre>
 <div class="block">Provide a handler for custom transactional operations.</div>
+</li>
+</ul>
+<a name="getCustomTransactionHandler--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomTransactionHandler</h4>
+<pre>public&nbsp;<a href="../../../org/cojen/tupl/ext/TransactionHandler.html" title="interface in org.cojen.tupl.ext">TransactionHandler</a>&nbsp;getCustomTransactionHandler()</pre>
 </li>
 </ul>
 <a name="clone--">

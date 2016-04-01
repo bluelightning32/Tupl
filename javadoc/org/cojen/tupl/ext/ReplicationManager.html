@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":18,"i4":18,"i5":18,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":18,"i12":6,"i13":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -148,7 +148,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -174,13 +174,13 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.html#notifyDrop-org.cojen.tupl.Index-">notifyDrop</a></span>(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index)</code>
 <div class="block">Notification to replica after an index is dropped.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.html#notifyRename-org.cojen.tupl.Index-byte:A-byte:A-">notifyRename</a></span>(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
             byte[]&nbsp;oldName,
             byte[]&nbsp;newName)</code>
@@ -188,7 +188,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.html#notifyStore-org.cojen.tupl.Index-byte:A-byte:A-">notifyStore</a></span>(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
            byte[]&nbsp;key,
            byte[]&nbsp;value)</code>
@@ -229,7 +229,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.html#syncConfirm-long-">syncConfirm</a></span>(long&nbsp;position)</code>
 <div class="block">Durably flushes all local data to non-volatile storage, up to the given confirmed
  position, and then blocks until fully confirmed.</div>
@@ -409,8 +409,8 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 <ul class="blockList">
 <li class="blockList">
 <h4>syncConfirm</h4>
-<pre>void&nbsp;syncConfirm(long&nbsp;position)
-          throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>default&nbsp;void&nbsp;syncConfirm(long&nbsp;position)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Durably flushes all local data to non-volatile storage, up to the given confirmed
  position, and then blocks until fully confirmed.</div>
 <dl>
@@ -465,9 +465,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 <ul class="blockList">
 <li class="blockList">
 <h4>notifyStore</h4>
-<pre>void&nbsp;notifyStore(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
-                 byte[]&nbsp;key,
-                 byte[]&nbsp;value)</pre>
+<pre>default&nbsp;void&nbsp;notifyStore(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
+                         byte[]&nbsp;key,
+                         byte[]&nbsp;value)</pre>
 <div class="block">Notification to replica when an entry is stored into an index. All notifications are
  <a href="../../../../org/cojen/tupl/LockMode.html#READ_UNCOMMITTED"><code>uncommitted</code></a>, and so loading with an appropriate lock
  mode is required for confirmation. The current thread is free to perform any blocking
@@ -486,9 +486,9 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 <ul class="blockList">
 <li class="blockList">
 <h4>notifyRename</h4>
-<pre>void&nbsp;notifyRename(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
-                  byte[]&nbsp;oldName,
-                  byte[]&nbsp;newName)</pre>
+<pre>default&nbsp;void&nbsp;notifyRename(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index,
+                          byte[]&nbsp;oldName,
+                          byte[]&nbsp;newName)</pre>
 <div class="block">Notification to replica after an index is renamed. The current thread is free to perform
  any blocking operations &mdash; it will not suspend replication processing unless <a href="../../../../org/cojen/tupl/DatabaseConfig.html#maxReplicaThreads-int-"><code>all</code></a> replication threads are consumed.</div>
 <dl>
@@ -505,7 +505,7 @@ extends <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>notifyDrop</h4>
-<pre>void&nbsp;notifyDrop(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index)</pre>
+<pre>default&nbsp;void&nbsp;notifyDrop(<a href="../../../../org/cojen/tupl/Index.html" title="interface in org.cojen.tupl">Index</a>&nbsp;index)</pre>
 <div class="block">Notification to replica after an index is dropped. The current thread is free to perform
  any blocking operations &mdash; it will not suspend replication processing unless <a href="../../../../org/cojen/tupl/DatabaseConfig.html#maxReplicaThreads-int-"><code>all</code></a> replication threads are consumed.</div>
 <dl>

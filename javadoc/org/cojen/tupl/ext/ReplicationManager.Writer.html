@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":18,"i1":6,"i2":6,"i3":6,"i4":18};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -119,13 +119,13 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
+<td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.Writer.html#confirm-long-">confirm</a></span>(long&nbsp;position)</code>
 <div class="block">Blocks until all data up to the given log position is confirmed.</div>
 </td>
@@ -149,6 +149,15 @@ var activeTableTab = "activeTableTab";
      int&nbsp;off,
      int&nbsp;len)</code>
 <div class="block">Fully writes the given data, returning a potential confirmation position.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>default long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/ext/ReplicationManager.Writer.html#writeCommit-byte:A-int-int-">writeCommit</a></span>(byte[]&nbsp;b,
+           int&nbsp;off,
+           int&nbsp;len)</code>
+<div class="block">Same as the regular write method, except that the message contains a transaction
+ commit operation.</div>
 </td>
 </tr>
 </table>
@@ -198,14 +207,35 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="writeCommit-byte:A-int-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCommit</h4>
+<pre>default&nbsp;long&nbsp;writeCommit(byte[]&nbsp;b,
+                         int&nbsp;off,
+                         int&nbsp;len)
+                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Same as the regular write method, except that the message contains a transaction
+ commit operation. This variant exists to allow an implementation to capture the
+ confirmation position of a transaction, in a thread-local variable.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>potential confirmation position, or -1 if not leader</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="confirm-long-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>confirm</h4>
-<pre>boolean&nbsp;confirm(long&nbsp;position)
-         throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>default&nbsp;boolean&nbsp;confirm(long&nbsp;position)
+                 throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Blocks until all data up to the given log position is confirmed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
