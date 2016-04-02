@@ -639,7 +639,8 @@ implements <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable
 <h4>directPageAccess</h4>
 <pre>public&nbsp;<a href="../../../org/cojen/tupl/DatabaseConfig.html" title="class in org.cojen.tupl">DatabaseConfig</a>&nbsp;directPageAccess(boolean&nbsp;direct)</pre>
 <div class="block">Set true to allocate all pages off the Java heap, offering increased performance and
- reduced garbage collection activity.</div>
+ reduced garbage collection activity. By default, direct page access is enabled if
+ supported.</div>
 </li>
 </ul>
 <a name="cachePriming-boolean-">
