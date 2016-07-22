@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":18,"i1":18,"i2":6,"i3":6,"i4":18,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":6,"i14":6,"i15":6,"i16":18,"i17":18,"i18":18,"i19":18,"i20":18,"i21":18,"i22":18,"i23":18};
+var methods = {"i0":18,"i1":18,"i2":6,"i3":6,"i4":18,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":6,"i14":6,"i15":18,"i16":18,"i17":18,"i18":6,"i19":18,"i20":18,"i21":18,"i22":18,"i23":18,"i24":18,"i25":18,"i26":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -242,6 +242,32 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i15" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#tryLockExclusive-org.cojen.tupl.Transaction-byte:A-long-">tryLockExclusive</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                byte[]&nbsp;key,
+                long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire an exclusive lock for the given key, denying any additional
+ locks.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>default <a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#tryLockShared-org.cojen.tupl.Transaction-byte:A-long-">tryLockShared</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+             byte[]&nbsp;key,
+             long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire a shared lock for the given key, denying exclusive locks.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#tryLockUpgradable-org.cojen.tupl.Transaction-byte:A-long-">tryLockUpgradable</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                 byte[]&nbsp;key,
+                 long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire an upgradable lock for the given key, denying exclusive and
+ additional upgradable locks.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#update-org.cojen.tupl.Transaction-byte:A-byte:A-byte:A-">update</a></span>(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
       byte[]&nbsp;key,
@@ -251,55 +277,55 @@ var activeTableTab = "activeTableTab";
  matches.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewGe-byte:A-">viewGe</a></span>(byte[]&nbsp;key)</code>
 <div class="block">Returns a sub-view, backed by this one, whose keys are greater than or
  equal to the given key.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewGt-byte:A-">viewGt</a></span>(byte[]&nbsp;key)</code>
 <div class="block">Returns a sub-view, backed by this one, whose keys are greater than the
  given key.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewLe-byte:A-">viewLe</a></span>(byte[]&nbsp;key)</code>
 <div class="block">Returns a sub-view, backed by this one, whose keys are less than or
  equal to the given key.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewLt-byte:A-">viewLt</a></span>(byte[]&nbsp;key)</code>
 <div class="block">Returns a sub-view, backed by this one, whose keys are less than the
  given key.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewPrefix-byte:A-int-">viewPrefix</a></span>(byte[]&nbsp;prefix,
           int&nbsp;trim)</code>
 <div class="block">Returns a sub-view, backed by this one, whose keys start with the given prefix.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewReverse--">viewReverse</a></span>()</code>
 <div class="block">Returns a view, backed by this one, whose natural order is reversed.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewTransformed-org.cojen.tupl.Transformer-">viewTransformed</a></span>(<a href="../../../org/cojen/tupl/Transformer.html" title="interface in org.cojen.tupl">Transformer</a>&nbsp;transformer)</code>
 <div class="block">Returns a sub-view, backed by this one, whose entries have been filtered out and
  transformed.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>default <a href="../../../org/cojen/tupl/View.html" title="interface in org.cojen.tupl">View</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/cojen/tupl/View.html#viewUnmodifiable--">viewUnmodifiable</a></span>()</code>
 <div class="block">Returns a view, backed by this one, whose entries cannot be modified.</div>
@@ -602,6 +628,36 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="tryLockShared-org.cojen.tupl.Transaction-byte:A-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tryLockShared</h4>
+<pre>default&nbsp;<a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a>&nbsp;tryLockShared(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                                 byte[]&nbsp;key,
+                                 long&nbsp;nanosTimeout)
+                          throws <a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a>,
+                                 <a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></pre>
+<div class="block">Explicitly acquire a shared lock for the given key, denying exclusive locks. Lock is
+ retained until the end of the transaction or scope.
+
+ <p>Transactions acquire locks automatically, and so use of this method is not
+ required. Ownership of the key instance is transferred, and so the key must not be
+ modified after calling this method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - non-null key to lock; instance is not cloned</dd>
+<dd><code>nanosTimeout</code> - maximum time to wait for lock; negative timeout is infinite</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../org/cojen/tupl/LockResult.html#INTERRUPTED"><code>INTERRUPTED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#TIMED_OUT_LOCK"><code>TIMED_OUT_LOCK</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#ACQUIRED"><code>ACQUIRED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#OWNED_SHARED"><code>OWNED_SHARED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#OWNED_UPGRADABLE"><code>OWNED_UPGRADABLE</code></a>, or <a href="../../../org/cojen/tupl/LockResult.html#OWNED_EXCLUSIVE"><code>OWNED_EXCLUSIVE</code></a></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if too many shared locks</dd>
+<dd><code><a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></code> - if deadlock was detected after waiting full timeout</dd>
+<dd><code><a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></code> - if key is not allowed</dd>
+</dl>
+</li>
+</ul>
 <a name="lockShared-org.cojen.tupl.Transaction-byte:A-">
 <!--   -->
 </a>
@@ -631,6 +687,35 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
+<a name="tryLockUpgradable-org.cojen.tupl.Transaction-byte:A-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tryLockUpgradable</h4>
+<pre>default&nbsp;<a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a>&nbsp;tryLockUpgradable(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                                     byte[]&nbsp;key,
+                                     long&nbsp;nanosTimeout)
+                              throws <a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a>,
+                                     <a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></pre>
+<div class="block">Explicitly acquire an upgradable lock for the given key, denying exclusive and
+ additional upgradable locks. Lock is retained until the end of the transaction or scope.
+
+ <p>Transactions acquire locks automatically, and so use of this method is not
+ required. Ownership of the key instance is transferred, and so the key must not be
+ modified after calling this method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - non-null key to lock; instance is not cloned</dd>
+<dd><code>nanosTimeout</code> - maximum time to wait for lock; negative timeout is infinite</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../org/cojen/tupl/LockResult.html#ILLEGAL"><code>ILLEGAL</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#INTERRUPTED"><code>INTERRUPTED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#TIMED_OUT_LOCK"><code>TIMED_OUT_LOCK</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#ACQUIRED"><code>ACQUIRED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#OWNED_UPGRADABLE"><code>OWNED_UPGRADABLE</code></a>, or <a href="../../../org/cojen/tupl/LockResult.html#OWNED_EXCLUSIVE"><code>OWNED_EXCLUSIVE</code></a></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></code> - if deadlock was detected after waiting full timeout</dd>
+<dd><code><a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></code> - if key is not allowed</dd>
+</dl>
+</li>
+</ul>
 <a name="lockUpgradable-org.cojen.tupl.Transaction-byte:A-">
 <!--   -->
 </a>
@@ -654,6 +739,35 @@ var activeTableTab = "activeTableTab";
 <dd><a href="../../../org/cojen/tupl/LockResult.html#ACQUIRED"><code>ACQUIRED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#OWNED_UPGRADABLE"><code>OWNED_UPGRADABLE</code></a>, or <a href="../../../org/cojen/tupl/LockResult.html#OWNED_EXCLUSIVE"><code>OWNED_EXCLUSIVE</code></a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/cojen/tupl/LockFailureException.html" title="class in org.cojen.tupl">LockFailureException</a></code> - if interrupted, timed out, or illegal upgrade</dd>
+<dd><code><a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></code> - if deadlock was detected after waiting full timeout</dd>
+<dd><code><a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></code> - if key is not allowed</dd>
+</dl>
+</li>
+</ul>
+<a name="tryLockExclusive-org.cojen.tupl.Transaction-byte:A-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tryLockExclusive</h4>
+<pre>default&nbsp;<a href="../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a>&nbsp;tryLockExclusive(<a href="../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                                    byte[]&nbsp;key,
+                                    long&nbsp;nanosTimeout)
+                             throws <a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a>,
+                                    <a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></pre>
+<div class="block">Explicitly acquire an exclusive lock for the given key, denying any additional
+ locks. Lock is retained until the end of the transaction or scope.
+
+ <p>Transactions acquire locks automatically, and so use of this method is not
+ required. Ownership of the key instance is transferred, and so the key must not be
+ modified after calling this method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - non-null key to lock; instance is not cloned</dd>
+<dd><code>nanosTimeout</code> - maximum time to wait for lock; negative timeout is infinite</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../org/cojen/tupl/LockResult.html#ILLEGAL"><code>ILLEGAL</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#INTERRUPTED"><code>INTERRUPTED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#TIMED_OUT_LOCK"><code>TIMED_OUT_LOCK</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#ACQUIRED"><code>ACQUIRED</code></a>, <a href="../../../org/cojen/tupl/LockResult.html#UPGRADED"><code>UPGRADED</code></a>, or <a href="../../../org/cojen/tupl/LockResult.html#OWNED_EXCLUSIVE"><code>OWNED_EXCLUSIVE</code></a></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/cojen/tupl/DeadlockException.html" title="class in org.cojen.tupl">DeadlockException</a></code> - if deadlock was detected after waiting full timeout</dd>
 <dd><code><a href="../../../org/cojen/tupl/ViewConstraintException.html" title="class in org.cojen.tupl">ViewConstraintException</a></code> - if key is not allowed</dd>
 </dl>

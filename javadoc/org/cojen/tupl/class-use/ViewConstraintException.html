@@ -149,6 +149,32 @@
  additional upgradable locks.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">View.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/View.html#tryLockExclusive-org.cojen.tupl.Transaction-byte:A-long-">tryLockExclusive</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                byte[]&nbsp;key,
+                long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire an exclusive lock for the given key, denying any additional
+ locks.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">View.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/View.html#tryLockShared-org.cojen.tupl.Transaction-byte:A-long-">tryLockShared</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+             byte[]&nbsp;key,
+             long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire a shared lock for the given key, denying exclusive locks.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default <a href="../../../../org/cojen/tupl/LockResult.html" title="enum in org.cojen.tupl">LockResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">View.</span><code><span class="memberNameLink"><a href="../../../../org/cojen/tupl/View.html#tryLockUpgradable-org.cojen.tupl.Transaction-byte:A-long-">tryLockUpgradable</a></span>(<a href="../../../../org/cojen/tupl/Transaction.html" title="interface in org.cojen.tupl">Transaction</a>&nbsp;txn,
+                 byte[]&nbsp;key,
+                 long&nbsp;nanosTimeout)</code>
+<div class="block">Explicitly acquire an upgradable lock for the given key, denying exclusive and
+ additional upgradable locks.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
